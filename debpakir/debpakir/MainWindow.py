@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 24 14:58:17 2020
-
-@author: fatih
-"""
 
 import gi, apt, os, sys
 
@@ -21,8 +16,8 @@ from subprocess import PIPE, Popen
 import locale
 from locale import gettext as _
 
-locale.bindtextdomain('pardus-package-installer', '/usr/share/locale')
-locale.textdomain('pardus-package-installer')
+locale.bindtextdomain('debpakir', '/usr/share/locale')
+locale.textdomain('debpakir')
 
 
 class MainWindow:
@@ -43,7 +38,7 @@ class MainWindow:
 
         # Gtk Builder
         self.builder = Gtk.Builder()
-        self.builder.add_from_file("/usr/share/pardus/pardus-package-installer/MainWindow.glade")
+        self.builder.add_from_file("/usr/share/daft-8/debpakir/MainWindow.glade")
         self.builder.connect_signals(self)
 
         self.window = self.builder.get_object("mainwindow")
@@ -57,7 +52,7 @@ class MainWindow:
         # Set version
         # If not getted from Version.py file then accept version in MainWindow.glade file
         try:
-            from parduspackageinstaller.Version import version
+            from debpakir.Version import version
             self.about_dialog.set_version(version)
         except:
             pass
@@ -287,7 +282,7 @@ class MainWindow:
                 self.notification = Notify.Notification.new(self.packagename + _(" upgraded"))
             else:
                 self.notification = Notify.Notification.new(self.packagename + _(" installed"))
-            self.command = ["/usr/bin/pkexec", "/usr/bin/pardus-package-installer-action", "install",
+            self.command = ["/usr/bin/pkexec", "/usr/bin/debpakir-gui", "install",
                             self.debianpackage]
             self.pid = self.startProcess(self.command)
             print(self.pid)
@@ -319,7 +314,7 @@ class MainWindow:
             self.openbutton.set_sensitive(False)
             self.closestatus = True
             self.notification = Notify.Notification.new(self.packagename + _(" uninstalled"))
-            self.command = ["/usr/bin/pkexec", "/usr/bin/pardus-package-installer-action", "remove", self.packagename]
+            self.command = ["/usr/bin/pkexec", "/usr/bin/debpakir-gui", "remove", self.packagename]
             self.pid = self.startProcess(self.command)
             print(self.pid)
 
@@ -333,7 +328,7 @@ class MainWindow:
         self.openbutton.set_sensitive(False)
         self.closestatus = True
         self.notification = Notify.Notification.new(self.packagename + _(" reinstalled"))
-        self.command = ["/usr/bin/pkexec", "/usr/bin/pardus-package-installer-action", "reinstall", self.debianpackage]
+        self.command = ["/usr/bin/pkexec", "/usr/bin/debpakir-gui", "reinstall", self.debianpackage]
         self.pid = self.startProcess(self.command)
         print(self.pid)
 
@@ -347,7 +342,7 @@ class MainWindow:
         self.openbutton.set_sensitive(False)
         self.closestatus = True
         self.notification = Notify.Notification.new(self.packagename + _(" downgraded"))
-        self.command = ["/usr/bin/pkexec", "/usr/bin/pardus-package-installer-action", "downgrade", self.debianpackage]
+        self.command = ["/usr/bin/pkexec", "/usr/bin/debpakir-gui", "downgrade", self.debianpackage]
         self.pid = self.startProcess(self.command)
         print(self.pid)
 
@@ -650,16 +645,16 @@ class MainWindow:
                 pixbuf = Gtk.IconTheme.get_default().load_icon(self.packagename, 64, Gtk.IconLookupFlags(16))
             except:
                 try:
-                    parduspixbuf = Gtk.IconTheme.new()
-                    parduspixbuf.set_custom_theme("pardus")
-                    pixbuf = parduspixbuf.load_icon(self.packagename, 64, Gtk.IconLookupFlags(16))
+                    daftpixbuf = Gtk.IconTheme.new()
+                    daftpixbuf.set_custom_theme("daft")
+                    pixbuf = daftpixbuf.load_icon(self.packagename, 64, Gtk.IconLookupFlags(16))
                 except:
                     try:
-                        pixbuf = Gtk.IconTheme.get_default().load_icon("pardus-package-installer", 64,
+                        pixbuf = Gtk.IconTheme.get_default().load_icon("debpakir", 64,
                                                                        Gtk.IconLookupFlags(16))
                     except:
                         try:
-                            pixbuf = parduspixbuf.load_icon("pardus-package-installer", 64, Gtk.IconLookupFlags(16))
+                            pixbuf = daftpixbuf.load_icon("debpakir-gui", 64, Gtk.IconLookupFlags(16))
                         except:
                             pixbuf = Gtk.IconTheme.get_default().load_icon("gtk-dialog-info", 64,
                                                                            Gtk.IconLookupFlags(16))

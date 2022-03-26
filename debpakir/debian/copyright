@@ -1,11 +1,11 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: pdebi
-Source: https://pardus.org.tr
+Upstream-Name: debpakir
+Source: https://github.com/DAFT-8
 
 
 
 Files: *
-Copyright: 2019 Fatih Altun <fatih.altun@pardus.org.tr>
+Copyright: 2022 Yurin Doctrine <github.com/YurinDoctrine>
 License: GPL-3.0+
 
 License: GPL-3.0+
@@ -24,5 +24,3 @@ License: GPL-3.0+
  .
  On Debian systems, the complete text of the GNU General
  Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
-
-

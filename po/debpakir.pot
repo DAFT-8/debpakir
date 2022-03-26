@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-14 01:46+0300\n"
+"POT-Creation-Date: 2022-12-5 14:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ui/MainWindow.glade:11
-msgid "© 2021 Pardus"
+msgid "© 2022 DAFT-8 GROUP, INC."
 msgstr ""
 
 #: ui/MainWindow.glade:12
@@ -26,7 +26,7 @@ msgid "Manage and view .deb packages"
 msgstr ""
 
 #: ui/MainWindow.glade:15
-msgid "Fatih Altun"
+msgid "Yurin Doctrine"
 msgstr ""
 
 #: ui/MainWindow.glade:52 ui/MainWindow.glade:899
@@ -46,7 +46,7 @@ msgid "Select"
 msgstr ""
 
 #: ui/MainWindow.glade:192
-msgid "Select a deb package to view. "
+msgid "Select a deb package to view "
 msgstr ""
 
 #: ui/MainWindow.glade:202 ui/MainWindow.glade:1087

@@ -5,19 +5,19 @@
 
 <policyconfig>
 
-  <vendor>Pardus Developers</vendor>
-  <vendor_url>https://www.pardus.org.tr/</vendor_url>
+  <vendor>DAFT-8 Team</vendor>
+  <vendor_url>https://www.github.com/DAFT-8/</vendor_url>
 
-  <action id="tr.org.pardus.pkexec.pardus-package-installer">
+  <action id="tr.org.daft-8.pkexec.debpakir">
     <description>Run FlashTool</description>
-    <message>Authentication is required to run Pardus Package Installer</message>
-    <message xml:lang="tr">Pardus Paket Kurucu uygulamasını çalıştırmak için yetkilendirme gerekiyor</message>
+    <message>Authentication is required to run the app.</message>
+    <message xml:lang="tr">Uygulamayı çalıştırmak için yetkilendirme gerekiyor.</message>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
       <allow_active>auth_admin_keep</allow_active>
     </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/share/pardus/pardus-package-installer/src/Actions.py</annotate>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/share/daft-8/debpakir/src/Actions.py</annotate>
     <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
   </action>
 

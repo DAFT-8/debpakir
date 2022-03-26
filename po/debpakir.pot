@@ -121,7 +121,7 @@ msgid "Dependencies"
 msgstr ""
 
 #: ui/MainWindow.glade:1054
-msgid "TÜBİTAK ULAKBİM | 2021"
+msgid "DAFT-8 | 2022"
 msgstr ""
 
 #: ui/MainWindow.glade:1078 src/MainWindow.py:67

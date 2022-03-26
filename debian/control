@@ -1,7 +1,7 @@
 Source: debpakir
 Section: admin
 Priority: optional
-Maintainer: Yurin Doctrine <github.com/YurinDoctrine>
+Maintainer: Yurin Doctrine <dummy@example.org>
 Build-Depends: debhelper (>= 10), dh-python, python3-all, python3-setuptools
 Standards-Version: 4.3.0
 Homepage: https://www.github.com/DAFT-8/debpakir
@@ -14,7 +14,8 @@ Depends: ${misc:Depends},
          gir1.2-gtk-3.0,
          gir1.2-notify-0.7,
          python3-apt
-Description: Manage and view .deb packages.
+Description: Package Installer
+ Manage and view .deb packages.
 Provides: debpakir
 Conflicts: debpakir
 Replaces: debpakir

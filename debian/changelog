@@ -1,8 +1,12 @@
-debpakir (0.0.1~Beta) unstable; urgency=medium
+debpakir (0.0.3) unstable; urgency=medium
 
-  * Add screenshots
-  * Add screenshots
   * Add LICENSE
   * Update README
 
  -- Yurin Doctrine <myemail@mail.com>  Wed, 22 Mar 2022 14:51:25 +0300
+
+debpakir (0.0.2) unstable; urgency=medium
+
+  * Add screenshots
+
+ -- Yurin Doctrine <myemail@mail.com>  Wed, 20 Mar 2022 10:11:25 +0300

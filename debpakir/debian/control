@@ -1,12 +1,12 @@
-Source: pardus-package-installer
+Source: debpakir
 Section: admin
 Priority: optional
-Maintainer: Fatih Altun <fatih.altun@pardus.org.tr>
+Maintainer: Yurin Doctrine <github.com/YurinDoctrine>
 Build-Depends: debhelper (>= 10), dh-python, python3-all, python3-setuptools
 Standards-Version: 4.3.0
-Homepage: http://pardus.org.tr
+Homepage: http://github.com/DAFT-8/
 
-Package: pardus-package-installer
+Package: debpakir
 Architecture: amd64
 Depends: ${misc:Depends},
          ${python3:Depends},
@@ -14,8 +14,7 @@ Depends: ${misc:Depends},
          gir1.2-gtk-3.0,
          gir1.2-notify-0.7,
          python3-apt
-Description: Pardus Deb Package Manager
- Simple tool to view and install local deb files
-Provides: pdebi
-Conflicts: pdebi
-Replaces: pdebi
+Description: Manage and view .deb packages.
+Provides: debpakir
+Conflicts: debpakir
+Replaces: debpakir

@@ -22,7 +22,7 @@ It is currently a work in progress. Maintenance is done by <a href="https://www.
 
 * `sudo apt install devscripts git-buildpackage`
 * `sudo mk-build-deps -ir`
-* `gbp buildpackage -us -uc`
+* `gbp buildpackage --git-ignore-branch -us -uc`
 
 ## Screenshots
 

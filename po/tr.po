@@ -126,8 +126,8 @@ msgid "Dependencies"
 msgstr "Bağımlılıklar"
 
 #: ui/MainWindow.glade:1054
-msgid "TÜBİTAK ULAKBİM | 2021"
-msgstr "TÜBİTAK ULAKBİM | 2021"
+msgid "DAFT-8 GROUP, INC. | 2022"
+msgstr "DAFT-8 GROUP, INC. | 2022"
 
 #: ui/MainWindow.glade:1078 src/MainWindow.py:67
 msgid "DEBian PacKage InstalleR"

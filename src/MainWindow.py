@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 24 14:58:17 2020
 
-@author: fatih
-"""
 import math
 import re
-
 import gi, apt, os, sys
 
 gi.require_version('Gtk', '3.0')
@@ -24,8 +19,8 @@ import threading
 import locale
 from locale import gettext as _
 
-locale.bindtextdomain('pardus-package-installer', '/usr/share/locale')
-locale.textdomain('pardus-package-installer')
+locale.bindtextdomain('debpakir', '/usr/share/locale')
+locale.textdomain('debpakir')
 
 
 class MainWindow(object):
@@ -67,7 +62,7 @@ class MainWindow(object):
             self.about_dialog.set_version(version)
         except:
             pass
-        self.about_dialog.set_program_name(_("Pardus Package Installer"))
+        self.about_dialog.set_program_name(_("DEBian PacKage InstalleR"))
 
         self.window.show_all()
 
@@ -745,16 +740,16 @@ class MainWindow(object):
                 pixbuf = Gtk.IconTheme.get_default().load_icon(self.packagename, 64, Gtk.IconLookupFlags(16))
             except:
                 try:
-                    parduspixbuf = Gtk.IconTheme.new()
-                    parduspixbuf.set_custom_theme("pardus")
-                    pixbuf = parduspixbuf.load_icon(self.packagename, 64, Gtk.IconLookupFlags(16))
+                    daftpixbuf = Gtk.IconTheme.new()
+                    daftpixbuf.set_custom_theme("daft")
+                    pixbuf = daftpixbuf.load_icon(self.packagename, 64, Gtk.IconLookupFlags(16))
                 except:
                     try:
-                        pixbuf = Gtk.IconTheme.get_default().load_icon("pardus-package-installer", 64,
+                        pixbuf = Gtk.IconTheme.get_default().load_icon("debpakir", 64,
                                                                        Gtk.IconLookupFlags(16))
                     except:
                         try:
-                            pixbuf = parduspixbuf.load_icon("pardus-package-installer", 64, Gtk.IconLookupFlags(16))
+                            pixbuf = daftpixbuf.load_icon("debpakir", 64, Gtk.IconLookupFlags(16))
                         except:
                             pixbuf = Gtk.IconTheme.get_default().load_icon("gtk-dialog-info", 64,
                                                                            Gtk.IconLookupFlags(16))

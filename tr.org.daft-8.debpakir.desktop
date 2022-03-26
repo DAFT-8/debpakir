@@ -1,7 +1,6 @@
 [Desktop Entry]
-Name=DEBian PacKage InstalleR
-GenericName=Package Installer
-GenericName[tr]=Paket Kurucu
+Name=debpakir
+GenericName=DEBian PacKage InstalleR
 Comment=Install and view software packages
 Comment[tr]=Yazılım paketlerini kur ve incele
 Exec=debpakir %f

@@ -1,2 +1,0 @@
-#!/bin/sh
-/usr/bin/python3 /usr/share/daft-8/debpakir/actions.py "$@"

@@ -21,6 +21,7 @@ It is currently a work in progress. Maintenance is done by <a href="https://www.
 ## Build deb package
 
 * `sudo apt install devscripts git-buildpackage`
+* `cd ~/debpakir/`
 * `sudo mk-build-deps -ir`
 * `gbp buildpackage --git-ignore-branch -us -uc`
 

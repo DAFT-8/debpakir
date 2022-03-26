@@ -47,7 +47,7 @@ msgid "Select"
 msgstr "Seç"
 
 #: ui/MainWindow.glade:192
-msgid "Select a deb package to view. "
+msgid "Select a deb package to view "
 msgstr "Görüntülemek için bir deb paketi seçin."
 
 #: ui/MainWindow.glade:202 ui/MainWindow.glade:1087
@@ -130,8 +130,8 @@ msgid "DAFT-8 GROUP, INC. | 2022"
 msgstr "DAFT-8 GROUP, INC. | 2022"
 
 #: ui/MainWindow.glade:1078 src/MainWindow.py:67
-msgid "DEBian PacKage InstalleR"
-msgstr "DEBian PacKage InstalleR"
+msgid "debpakir"
+msgstr "debpakir"
 
 #: src/MainWindow.py:149 src/MainWindow.py:153
 msgid "Installed Version :"

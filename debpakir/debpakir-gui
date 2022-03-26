@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/bin/python3 /usr/share/pardus/pardus-package-installer/actions.py "$@"
+/usr/bin/python3 /usr/share/daft-8/debpakir/actions.py "$@"

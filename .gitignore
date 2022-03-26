@@ -1,3 +1,4 @@
+build/
 *.deb
 *.glade~
 *.idea

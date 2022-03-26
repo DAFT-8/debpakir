@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Wed May 13 01:20:31 2020
-
-@author: fatih
-"""
 
 import sys
 import gi
@@ -17,7 +12,7 @@ from gi.repository import GLib, Gio, Gtk
 
 class Application(Gtk.Application):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, application_id="tr.org.pardus.package-installer",
+        super().__init__(*args, application_id="tr.org.daft-8.debpakir",
                          flags=Gio.ApplicationFlags.HANDLES_OPEN | Gio.ApplicationFlags.NON_UNIQUE, **kwargs)
         self.window = None
         self.emptyfile = None

@@ -1,8 +1,8 @@
-# Pardus Package Installer
+# DEBian PacKage InstalleR
 
-Pardus Package Installer is a application for install, uninstall or view deb packages.
+debpakir is a application for install, uninstall or view deb packages.
 
-It is currently a work in progress. Maintenance is done by <a href="https://www.pardus.org.tr/">Pardus</a> team.
+It is currently a work in progress. Maintenance is done by <a href="https://www.github.com/DAFT-8/">DAFT-8</a> team.
 
 ## Dependencies:
 
@@ -14,26 +14,16 @@ It is currently a work in progress. Maintenance is done by <a href="https://www.
 * Install dependencies :
     * ```gir1.2-glib-2.0 gir1.2-gtk-3.0 gir1.2-notify-0.7 python3-apt```
 * Clone the repository :
-    * ```git clone https://github.com/pardus/pardus-package-installer.git ~/pardus-package-installer```
+    * ```git clone https://github.com/DAFT-8/debpakir.git ~/debpakir```
 * Run application :
-    * ```python3 ~/pardus-package-installer/src/main.py```
+    * ```python3 ~/debpakir/src/main.py```
 
 ## Build deb package
 
 * `sudo apt install devscripts git-buildpackage`
 * `sudo mk-build-deps -ir`
-* `gbp buildpackage --git-export-dir=/tmp/build/pardus-package-installer -us -uc`
+* `gbp buildpackage -us -uc`
 
 ## Screenshots
 
-![Pardus Package Installer 1](screenshots/pardus-package-installer-1.png)
-
-![Pardus Package Installer 2](screenshots/pardus-package-installer-2.png)
-
-![Pardus Package Installer 3](screenshots/pardus-package-installer-3.png)
-
-![Pardus Package Installer 4](screenshots/pardus-package-installer-4.png)
-
-![Pardus Package Installer 5](screenshots/pardus-package-installer-5.png)
-
-![Pardus Package Installer 6](screenshots/pardus-package-installer-6.png)
+empty

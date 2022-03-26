@@ -1,10 +1,9 @@
 [Desktop Entry]
-Name=Pardus Package Installer
-Name[tr]=Pardus Paket Kurucu
+Name=DEBian PacKage InstalleR
 GenericName=Package Installer
 GenericName[tr]=Paket Kurucu
 Comment=Install and view software packages
-Comment[tr]=Yazılım paketlerini kur ve izle
+Comment[tr]=Yazılım paketlerini kur ve incele
 Exec=pardus-package-installer %f
 Icon=pardus-package-installer
 Terminal=false
@@ -12,4 +11,4 @@ Type=Application
 Categories=System;
 MimeType=application/vnd.debian.binary-package;
 StartupNotify=true
-Keywords=package;apt;dpkg;install;deb
+Keywords=package;apt;dpkg;install;deb;software;get

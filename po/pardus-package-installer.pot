@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-14 01:46+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ui/MainWindow.glade:11
+msgid "© 2021 Pardus"
+msgstr ""
+
+#: ui/MainWindow.glade:12
+msgid "Manage and view .deb packages"
+msgstr ""
+
+#: ui/MainWindow.glade:15
+msgid "Fatih Altun"
+msgstr ""
+
+#: ui/MainWindow.glade:52 ui/MainWindow.glade:899
+msgid "Info"
+msgstr ""
+
+#: ui/MainWindow.glade:53
+msgid "You cannot close the application while the process is continuing."
+msgstr ""
+
+#: ui/MainWindow.glade:122
+msgid "Select File"
+msgstr ""
+
+#: ui/MainWindow.glade:126
+msgid "Select"
+msgstr ""
+
+#: ui/MainWindow.glade:192
+msgid "Select a deb package to view. "
+msgstr ""
+
+#: ui/MainWindow.glade:202 ui/MainWindow.glade:1087
+msgid "Open"
+msgstr ""
+
+#: ui/MainWindow.glade:249
+msgid "Package Name"
+msgstr ""
+
+#: ui/MainWindow.glade:273
+msgid "version"
+msgstr ""
+
+#: ui/MainWindow.glade:294
+msgid "short description"
+msgstr ""
+
+#: ui/MainWindow.glade:322
+msgid "<small><span weight='light'>Installed Version :</span></small>"
+msgstr ""
+
+#: ui/MainWindow.glade:337
+msgid "<small><span weight='light'>Not installed</span></small>"
+msgstr ""
+
+#: ui/MainWindow.glade:377 src/MainWindow.py:174 src/MainWindow.py:184
+#: src/MainWindow.py:534 src/MainWindow.py:559 src/MainWindow.py:602
+msgid "Install"
+msgstr ""
+
+#: ui/MainWindow.glade:394 src/MainWindow.py:175 src/MainWindow.py:185
+#: src/MainWindow.py:603
+msgid "Uninstall"
+msgstr ""
+
+#: ui/MainWindow.glade:411
+msgid "Details"
+msgstr ""
+
+#: ui/MainWindow.glade:450
+msgid "Done"
+msgstr ""
+
+#: ui/MainWindow.glade:522
+msgid "Your system has broken dependencies."
+msgstr ""
+
+#: ui/MainWindow.glade:541
+msgid ""
+"This application can not continue until this is fixed.\n"
+"To fix it run\n"
+"<b>sudo apt install --fix-broken</b>\n"
+"in a terminal window."
+msgstr ""
+
+#: ui/MainWindow.glade:667 ui/MainWindow.glade:708 ui/MainWindow.glade:749
+#: ui/MainWindow.glade:792 ui/MainWindow.glade:833 ui/MainWindow.glade:874
+msgid "-"
+msgstr ""
+
+#: ui/MainWindow.glade:930
+msgid "Dependency List"
+msgstr ""
+
+#: ui/MainWindow.glade:969
+msgid "Packages to install"
+msgstr ""
+
+#: ui/MainWindow.glade:1010
+msgid "Dependencies"
+msgstr ""
+
+#: ui/MainWindow.glade:1054
+msgid "TÜBİTAK ULAKBİM | 2021"
+msgstr ""
+
+#: ui/MainWindow.glade:1078 src/MainWindow.py:67
+msgid "Pardus Package Installer"
+msgstr ""
+
+#: src/MainWindow.py:149 src/MainWindow.py:153
+msgid "Installed Version :"
+msgstr ""
+
+#: src/MainWindow.py:155 src/MainWindow.py:586
+msgid "Not installed"
+msgstr ""
+
+#: src/MainWindow.py:388
+msgid " upgraded"
+msgstr ""
+
+#: src/MainWindow.py:390
+msgid " installed"
+msgstr ""
+
+#: src/MainWindow.py:409
+msgid "Package Architecture Error"
+msgstr ""
+
+#: src/MainWindow.py:409
+msgid "System"
+msgstr ""
+
+#: src/MainWindow.py:409
+msgid "Package"
+msgstr ""
+
+#: src/MainWindow.py:421
+msgid " uninstalled"
+msgstr ""
+
+#: src/MainWindow.py:433
+msgid " reinstalled"
+msgstr ""
+
+#: src/MainWindow.py:445
+msgid " downgraded"
+msgstr ""
+
+#: src/MainWindow.py:461
+msgid "Installing"
+msgstr ""
+
+#: src/MainWindow.py:465
+msgid "Downgrading"
+msgstr ""
+
+#: src/MainWindow.py:470
+msgid "Reinstalling"
+msgstr ""
+
+#: src/MainWindow.py:475
+msgid "Upgrading"
+msgstr ""
+
+#: src/MainWindow.py:480
+msgid "Uninstalling"
+msgstr ""
+
+#: src/MainWindow.py:523
+msgid "Show Details"
+msgstr ""
+
+#: src/MainWindow.py:526
+msgid "Hide Details"
+msgstr ""
+
+#: src/MainWindow.py:539 src/MainWindow.py:564
+msgid "Downgrade"
+msgstr ""
+
+#: src/MainWindow.py:544 src/MainWindow.py:569
+msgid "Reinstall"
+msgstr ""
+
+#: src/MainWindow.py:549 src/MainWindow.py:574
+msgid "Upgrade"
+msgstr ""
+
+#: src/MainWindow.py:556
+msgid "Error !"
+msgstr ""
+
+#: src/MainWindow.py:668
+msgid "Not Completed !"
+msgstr ""
+
+#: src/MainWindow.py:671 src/MainWindow.py:691
+msgid "<b><span color='red'>Connection Error !</span></b>"
+msgstr ""
+
+#: src/MainWindow.py:673 src/MainWindow.py:693
+msgid "<b><span color='red'>Dpkg Lock Error !</span></b>"
+msgstr ""
+
+#: src/MainWindow.py:675 src/MainWindow.py:695
+msgid "<b><span color='red'>Dpkg Interrupt Error !</span></b>"
+msgstr ""
+
+#: src/MainWindow.py:703
+msgid ""
+"Only one software management tool is allowed to run at the same time.\n"
+"Please close the other application\n"
+"e.g. 'Update Manager', 'aptitude' or 'Synaptic' first."
+msgstr ""

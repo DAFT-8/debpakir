@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 24 14:58:17 2020
 
-@author: fatih
-"""
 import subprocess, sys, os, apt_pkg
 
 

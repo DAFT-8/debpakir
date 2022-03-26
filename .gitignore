@@ -1,4 +1,5 @@
 build/
+.pybuild/
 *.deb
 *.glade~
 *.idea

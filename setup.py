@@ -33,7 +33,7 @@ setup(
     scripts=["debpakir"],
     install_requires=["PyGObject"],
     data_files=data_files,
-    author="Fatih Altun",
+    author="Yurin Doctrine",
     author_email="",
     description="Manage and view .deb packages.",
     license="GPLv3",

@@ -8,7 +8,7 @@
   <vendor>DAFT-8 Team</vendor>
   <vendor_url>http://www.github.com/DAFT-8/</vendor_url>
 
-  <action id="tr.org.pardus.pkexec.pardus-package-installer">
+  <action id="tr.org.daft-8.pkexec.debpakir">
     <description>Run FlashTool</description>
     <message>Authentication is required to run DEBian PacKage InstalleR</message>
     <message xml:lang="tr">DEBian PacKege InstalleR uygulamasını çalıştırmak için yetkilendirme gerekiyor</message>

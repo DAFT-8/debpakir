@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ui/MainWindow.glade:9 ui/MainWindow.glade:81
-msgid "Pardus Package Installer"
+msgid "DEBian PacKage InstalleR"
 msgstr ""
 
 #: ui/MainWindow.glade:11
-msgid "© 2020 Pardus"
+msgid "© 2022 DAFT-8"
 msgstr ""
 
 #: ui/MainWindow.glade:12
@@ -34,7 +34,7 @@ msgid "Website"
 msgstr ""
 
 #: ui/MainWindow.glade:16
-msgid "Fatih Altun"
+msgid "Yurin Doctrine"
 msgstr ""
 
 #: ui/MainWindow.glade:102
@@ -85,17 +85,17 @@ msgstr ""
 msgid "Package Depends"
 msgstr ""
 
-#: ui/MainWindow.glade:614 parduspackageinstaller/MainWindow.py:108
-#: parduspackageinstaller/MainWindow.py:119
-#: parduspackageinstaller/MainWindow.py:430
-#: parduspackageinstaller/MainWindow.py:453
-#: parduspackageinstaller/MainWindow.py:526
+#: ui/MainWindow.glade:614 debpakir/MainWindow.py:108
+#: debpakir/MainWindow.py:119
+#: debpakir/MainWindow.py:430
+#: debpakir/MainWindow.py:453
+#: debpakir/MainWindow.py:526
 msgid "Install"
 msgstr ""
 
-#: ui/MainWindow.glade:630 parduspackageinstaller/MainWindow.py:109
-#: parduspackageinstaller/MainWindow.py:120
-#: parduspackageinstaller/MainWindow.py:527
+#: ui/MainWindow.glade:630 debpakir/MainWindow.py:109
+#: debpakir/MainWindow.py:120
+#: debpakir/MainWindow.py:527
 msgid "Uninstall"
 msgstr ""
 
@@ -111,18 +111,18 @@ msgstr ""
 msgid "page1"
 msgstr ""
 
-#: ui/MainWindow.glade:755 parduspackageinstaller/MainWindow.py:513
-#: parduspackageinstaller/MainWindow.py:516
+#: ui/MainWindow.glade:755 debpakir/MainWindow.py:513
+#: debpakir/MainWindow.py:516
 msgid "Installed Version : "
 msgstr ""
 
-#: ui/MainWindow.glade:771 parduspackageinstaller/MainWindow.py:479
-#: parduspackageinstaller/MainWindow.py:517
+#: ui/MainWindow.glade:771 debpakir/MainWindow.py:479
+#: debpakir/MainWindow.py:517
 msgid "Not installed"
 msgstr ""
 
 #: ui/MainWindow.glade:814
-msgid "TÜBİTAK ULAKBİM | 2020"
+msgid "DAFT-8 | 2022"
 msgstr ""
 
 #: ui/MainWindow.glade:837
@@ -160,128 +160,128 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:208
+#: debpakir/MainWindow.py:208
 msgid "Version is not avaible"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:213
+#: debpakir/MainWindow.py:213
 msgid "Description is not avaible"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:218
+#: debpakir/MainWindow.py:218
 msgid "Maintainer is not avaible"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:223
+#: debpakir/MainWindow.py:223
 msgid "Priority is not avaible"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:228
+#: debpakir/MainWindow.py:228
 msgid "Section is not avaible"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:233
+#: debpakir/MainWindow.py:233
 msgid "Size is not avaible"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:238
+#: debpakir/MainWindow.py:238
 msgid "Architecture is not avaible"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:278
+#: debpakir/MainWindow.py:278
 msgid "Installing ..."
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:285
+#: debpakir/MainWindow.py:285
 msgid " upgraded"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:287
+#: debpakir/MainWindow.py:287
 msgid " installed"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:304
+#: debpakir/MainWindow.py:304
 msgid "<b><span color='red'>Error :</span> Package Architecture = "
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:305
+#: debpakir/MainWindow.py:305
 msgid ", System Architecture = "
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:314
+#: debpakir/MainWindow.py:314
 msgid "Uninstalling ..."
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:320
+#: debpakir/MainWindow.py:320
 msgid " uninstalled"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:329
+#: debpakir/MainWindow.py:329
 msgid "Reinstalling ..."
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:335
+#: debpakir/MainWindow.py:335
 msgid " reinstalled"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:344
+#: debpakir/MainWindow.py:344
 msgid "Downgrading ..."
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:350
+#: debpakir/MainWindow.py:350
 msgid " downgraded"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:435
-#: parduspackageinstaller/MainWindow.py:458
+#: debpakir/MainWindow.py:435
+#: debpakir/MainWindow.py:458
 msgid "Downgrade"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:440
-#: parduspackageinstaller/MainWindow.py:463
+#: debpakir/MainWindow.py:440
+#: debpakir/MainWindow.py:463
 msgid "Reinstall"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:445
-#: parduspackageinstaller/MainWindow.py:468
+#: debpakir/MainWindow.py:445
+#: debpakir/MainWindow.py:468
 msgid "Upgrade"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:450
+#: debpakir/MainWindow.py:450
 msgid "<b><span color='red'>Error ! </span></b>"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:562
+#: debpakir/MainWindow.py:562
 msgid "Downloading dependencies : "
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:565
+#: debpakir/MainWindow.py:565
 msgid "Controlling dependencies : "
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:599
+#: debpakir/MainWindow.py:599
 msgid ""
 "Operation was successfully completed ! \n"
 " \n"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:601
+#: debpakir/MainWindow.py:601
 msgid "<b>Completed !</b>"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:608
+#: debpakir/MainWindow.py:608
 msgid "<b>Not Completed !</b>"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:611
-#: parduspackageinstaller/MainWindow.py:635
+#: debpakir/MainWindow.py:611
+#: debpakir/MainWindow.py:635
 msgid "<b><span color='red'>Connection Error !</span></b>"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:613
+#: debpakir/MainWindow.py:613
 msgid "<b><span color='red'>Dpkg Lock Error !</span></b>"
 msgstr ""
 
-#: parduspackageinstaller/MainWindow.py:615
+#: debpakir/MainWindow.py:615
 msgid "<b><span color='red'>Dpkg Interrupt Error !</span></b>"
 msgstr ""

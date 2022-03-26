@@ -16,27 +16,27 @@ if os.path.exists(changelog):
     f.close()
 
 data_files = [
-    ("/usr/share/applications", ["tr.org.pardus.package-installer.desktop"]),
-    ("/usr/share/locale/tr/LC_MESSAGES", ["po/tr/pardus-package-installer.mo"]),
-    ("/usr/share/pardus/pardus-package-installer/ui", ["ui/MainWindow.glade"]),
-    ("/usr/share/pardus/pardus-package-installer/src",
+    ("/usr/share/applications", ["tr.org.daft-8.debpakir.desktop"]),
+    ("/usr/share/locale/tr/LC_MESSAGES", ["po/tr/debpakir.mo"]),
+    ("/usr/share/daft-8/debpakir/ui", ["ui/MainWindow.glade"]),
+    ("/usr/share/daft-8/debpakir/src",
      ["src/Actions.py", "src/main.py", "src/MainWindow.py", "src/__version__"]),
-    ("/usr/bin", ["pardus-package-installer"]),
-    ("/usr/share/polkit-1/actions", ["tr.org.pardus.pkexec.pardus-package-installer.policy"]),
-    ("/usr/share/icons/hicolor/scalable/apps/", ["images/pardus-package-installer.svg"])
+    ("/usr/bin", ["debpakir"]),
+    ("/usr/share/polkit-1/actions", ["tr.org.daft-8.pkexec.debpakir.policy"]),
+    ("/usr/share/icons/hicolor/scalable/apps/", ["images/debpakir.svg"])
 ]
 
 setup(
-    name="Pardus Package Installer",
+    name="DEBian PacKage InstalleR",
     version=version,
     packages=find_packages(),
-    scripts=["pardus-package-installer"],
+    scripts=["debpakir"],
     install_requires=["PyGObject"],
     data_files=data_files,
     author="Fatih Altun",
-    author_email="fatih.altun@pardus.org.tr",
-    description="Pardus Deb Package Installer.",
+    author_email="",
+    description="Manage and view .deb packages.",
     license="GPLv3",
     keywords="deb package installer",
-    url="https://www.pardus.org.tr",
+    url="https://www.github.com/DAFT-8/debpakir",
 )

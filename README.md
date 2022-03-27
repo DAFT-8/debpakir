@@ -1,6 +1,6 @@
 # DEBian PacKage InstalleR
 
-debpakir is a application for install, uninstall or view deb packages.
+_debpakir_ is a application for install, uninstall or view deb packages.
 
 It is currently a work in progress. Maintenance is done by <a href="https://www.github.com/DAFT-8/">DAFT-8</a> team.
 

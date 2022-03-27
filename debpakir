@@ -1,3 +1,8 @@
 #!/usr/bin/sh
 
-/usr/bin/python3 /usr/share/daft-8/debpakir/src/main.py "$@"
+ps aux | grep -i 'python3' | grep debpakir
+if [[ $? == 0 ]]; then
+echo running && exit
+else
+exec /usr/bin/python3 /usr/share/daft-8/debpakir/src/main.py "$@"
+fi

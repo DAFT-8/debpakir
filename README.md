@@ -26,5 +26,4 @@ It is currently a work in progress. Maintenance is done by <a href="https://www.
 * `gbp buildpackage --git-ignore-branch -us -uc`
 
 ## Screenshots
-
-empty
+![empty](empty.png)

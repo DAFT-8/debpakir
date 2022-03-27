@@ -18,7 +18,7 @@ It is currently a work in progress. Maintenance is done by <a href="https://www.
 * Run application :
     * ```python3 ~/debpakir/src/main.py```
 
-## Build deb package
+## Build the package
 
 * `sudo apt install devscripts git-buildpackage`
 * `cd ~/debpakir/`

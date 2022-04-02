@@ -1,8 +1,8 @@
 #!/usr/bin/sh
 
-ps aux | grep -i 'python3' | grep debpakir
+ps aux | egrep -i 'python3' | egrep debpakir
 if [[ $? == 0 ]]; then
-echo running && exit
+pgrep -f debpakir$ && /usr/bin/xdotool key --window "$(/usr/bin/xdotool search --name "^debpakir$")" R && exit
 else
 exec /usr/bin/python3 /usr/share/daft-8/debpakir/src/main.py "$@"
 fi

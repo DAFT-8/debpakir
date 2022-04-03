@@ -1,5 +1,6 @@
 debpakir (0.0.3) unstable; urgency=medium
 
+  * Add focus on active
   * Fix overloading
   * Add LICENSE
   * Update README

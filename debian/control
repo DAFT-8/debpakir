@@ -15,7 +15,7 @@ Depends: ${misc:Depends},
          gir1.2-notify-0.7,
          python3-apt,
          xdotool,
-         pgrep
+         procps
 Description: Package Installer
  debpakir is a application for install, uninstall or view deb packages.
 Provides: debpakir

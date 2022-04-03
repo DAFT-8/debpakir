@@ -25,5 +25,6 @@ It is currently a work in progress. Maintenance is done by <a href="https://www.
 * `sudo mk-build-deps -ir`
 * `gbp buildpackage --git-ignore-new -us -uc`
 
-## Screenshots
+## Screenshot(s)
+
 ![debpakir](screenshot.png)

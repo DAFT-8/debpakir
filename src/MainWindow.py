@@ -39,7 +39,6 @@ class MainWindow(object):
         self.isinstalling = False
         self.isbroken = False
         self.set_resizable(False)
-        self.stick
         self.set_position(1)
 
         # Gtk Builder

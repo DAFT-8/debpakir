@@ -38,8 +38,8 @@ class MainWindow(object):
         self.notificationstate = True
         self.isinstalling = False
         self.isbroken = False
-        self.set_resizable(False)
-        self.set_position(1)
+        self.set_resizable = False
+        self.set_position = 1
 
         # Gtk Builder
         self.MainWindowUIFileName = os.path.dirname(os.path.abspath(__file__)) + "/../ui/MainWindow.glade"

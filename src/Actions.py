@@ -28,7 +28,7 @@ def main():
                         env={**os.environ, 'DEBIAN_FRONTEND': 'noninteractive'})
 
     def downgrade(packagename):
-        subprocess.call(["apt", "install", "--allow-downgrades", packagename, "-yq", "-o", "APT::Status-Fd=2"],
+        subprocess.call(["apt", "install", "--ignore-missing", "--allow-downgrades", packagename, "-yq", "-o", "APT::Status-Fd=2"],
                         env={**os.environ, 'DEBIAN_FRONTEND': 'noninteractive'})
 
     if len(sys.argv) > 1:

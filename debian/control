@@ -17,7 +17,7 @@ Depends: ${misc:Depends},
          xdotool,
          procps
 Description: Package Installer
- debpakir is a application for install, uninstall or view deb packages.
+ debpakir Is an application for install, uninstall or view deb packages.
 Provides: debpakir
 Conflicts: debpakir
 Replaces: debpakir

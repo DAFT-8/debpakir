@@ -1,23 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from locale import gettext as _
+import locale
+import threading
+from subprocess import PIPE, Popen
+import apt.debfile as aptdeb
+from gi.repository import Notify
+from gi.repository import Gdk
+from gi.repository import GLib
+from gi.repository import GObject
+from gi.repository import Gtk
 import math
 import re
-import gi, apt, os, sys
+import gi
+import apt
+import os
+import sys
 
 gi.require_version('Gtk', '3.0')
 gi.require_version("Notify", "0.7")
-from gi.repository import Gtk
-from gi.repository import GObject
-from gi.repository import GLib
-from gi.repository import Gdk
-from gi.repository import Notify
-import apt.debfile as aptdeb
-from subprocess import PIPE, Popen
-import threading
 
-import locale
-from locale import gettext as _
 
 locale.bindtextdomain('debpakir', '/usr/share/locale')
 locale.textdomain('debpakir')
@@ -42,7 +45,8 @@ class MainWindow(object):
         self.set_position = 1
 
         # Gtk Builder
-        self.MainWindowUIFileName = os.path.dirname(os.path.abspath(__file__)) + "/../ui/MainWindow.glade"
+        self.MainWindowUIFileName = os.path.dirname(
+            os.path.abspath(__file__)) + "/../ui/MainWindow.glade"
         try:
             self.builder = Gtk.Builder.new_from_file(self.MainWindowUIFileName)
             self.builder.connect_signals(self)
@@ -60,7 +64,8 @@ class MainWindow(object):
         # Set version
         # If not getted from __version__ file then accept version in MainWindow.glade file
         try:
-            version = open(os.path.dirname(os.path.abspath(__file__)) + "/__version__").readline()
+            version = open(os.path.dirname(os.path.abspath(
+                __file__)) + "/__version__").readline()
             self.about_dialog.set_version(version)
         except:
             pass
@@ -99,9 +104,12 @@ class MainWindow(object):
         self.progstack.set_visible(False)
         self.doneinfolabel.set_text("")
 
-        self.pacname.set_markup("<span size='x-large'><b>{}</b></span>".format(self.packagename))
-        self.pacversion.set_markup("<small>{}</small>".format(GLib.markup_escape_text(self.packageversion, -1)))
-        self.shortdesc.set_markup("<small>{}</small>".format(GLib.markup_escape_text(self.packageshortdescription, -1)))
+        self.pacname.set_markup(
+            "<span size='x-large'><b>{}</b></span>".format(self.packagename))
+        self.pacversion.set_markup(
+            "<small>{}</small>".format(GLib.markup_escape_text(self.packageversion, -1)))
+        self.shortdesc.set_markup(
+            "<small>{}</small>".format(GLib.markup_escape_text(self.packageshortdescription, -1)))
         self.shortdesc.set_tooltip_text("{}".format(self.packagedescription))
 
         self.maintainername.set_text(self.packagemaintainername)
@@ -142,7 +150,8 @@ class MainWindow(object):
         except Exception as e:
             print("{}".format(e))
             pd = ""
-        self.depends.set_markup("<small>{}</small>".format(GLib.markup_escape_text(pd, -1)))
+        self.depends.set_markup(
+            "<small>{}</small>".format(GLib.markup_escape_text(pd, -1)))
 
         if self.packagemissingdeps:
             self.missingdeps.set_markup("<small>{}</small>".format(
@@ -153,7 +162,8 @@ class MainWindow(object):
             systemversion = pkg.versions[0].version
             self.installed_version_title.set_markup(
                 "<small><span weight='light'>{}</span></small>".format(_("Installed Version :")))
-            self.installed_version.set_markup("<small><span weight='light'>{}</span></small>".format(systemversion))
+            self.installed_version.set_markup(
+                "<small><span weight='light'>{}</span></small>".format(systemversion))
         else:
             self.installed_version_title.set_markup(
                 "<small><span weight='light'>{}</span></small>".format(_("Installed Version :")))
@@ -203,13 +213,15 @@ class MainWindow(object):
         self.filechooser = self.builder.get_object("filechooser")
         self.selectbutton = self.builder.get_object("selectbutton")
         self.aboutbutton = self.builder.get_object("aboutbutton")
-        self.broken_close_button = self.builder.get_object("broken_close_button")
+        self.broken_close_button = self.builder.get_object(
+            "broken_close_button")
 
         self.pacname = self.builder.get_object("pacname")
         self.shortdesc = self.builder.get_object("shortdesc")
         self.pacversion = self.builder.get_object("pacversion")
         self.namegrid = self.builder.get_object("namegrid")
-        self.installedversiongrid = self.builder.get_object("installedversiongrid")
+        self.installedversiongrid = self.builder.get_object(
+            "installedversiongrid")
         self.bottomseparator = self.builder.get_object("bottomseparator")
         self.bottomlabel = self.builder.get_object("bottomlabel")
         self.errorlabel = self.builder.get_object("errorlabel")
@@ -235,7 +247,8 @@ class MainWindow(object):
         self.doneinfolabel = self.builder.get_object("doneinfolabel")
 
         self.textview = self.builder.get_object("textview")
-        self.descriptionscrolledwindow = self.builder.get_object("descriptionscrolledwindow")
+        self.descriptionscrolledwindow = self.builder.get_object(
+            "descriptionscrolledwindow")
         self.stack1 = self.builder.get_object("stack1")
         self.mainstack = self.builder.get_object("mainstack")
 
@@ -245,7 +258,8 @@ class MainWindow(object):
         self.reinstallicon = self.builder.get_object("reinstall_icon")
 
         self.installed_version = self.builder.get_object("installed_version")
-        self.installed_version_title = self.builder.get_object("installed_version_title")
+        self.installed_version_title = self.builder.get_object(
+            "installed_version_title")
 
         self.outputSW = self.builder.get_object("outputSW")
 
@@ -281,7 +295,8 @@ class MainWindow(object):
                 self.packagedescription = ""
 
             try:
-                self.packageshortdescription = self.package["Description"].split("\n")[0]
+                self.packageshortdescription = self.package["Description"].split("\n")[
+                    0]
             except Exception as e:
                 print("{}".format(e))
                 self.packageshortdescription = ""
@@ -293,13 +308,15 @@ class MainWindow(object):
                 self.packagemaintainer = "-"
 
             try:
-                self.packagemaintainername = self.packagemaintainer.split(" <")[0]
+                self.packagemaintainername = self.packagemaintainer.split(" <")[
+                    0]
             except Exception as e:
                 print("{}".format(e))
                 self.packagemaintainername = "-"
 
             try:
-                self.packagemaintainermail = self.packagemaintainer.split(" <")[1].replace(">", "")
+                self.packagemaintainermail = self.packagemaintainer.split(" <")[
+                    1].replace(">", "")
             except Exception as e:
                 print("{}".format(e))
                 self.packagemaintainermail = "-"
@@ -335,11 +352,13 @@ class MainWindow(object):
                 self.packagedepends = ""
 
             try:
-                self.packagemissingdeps = "\n\n".join(self.package.required_changes[0])
+                self.packagemissingdeps = "\n\n".join(
+                    self.package.required_changes[0])
             except Exception as e:
                 print("{}".format(e))
                 try:
-                    self.packagemissingdeps = "\n\n".join(self.package.missing_deps)
+                    self.packagemissingdeps = "\n\n".join(
+                        self.package.missing_deps)
                 except Exception as e:
                     print("{}".format(e))
                     self.packagemissingdeps = ""
@@ -387,9 +406,11 @@ class MainWindow(object):
             self.openbutton.set_sensitive(False)
             self.closestatus = True
             if isupgrading:
-                self.notification = Notify.Notification.new(self.packagename + _(" upgraded"))
+                self.notification = Notify.Notification.new(
+                    self.packagename + _(" upgraded"))
             else:
-                self.notification = Notify.Notification.new(self.packagename + _(" installed"))
+                self.notification = Notify.Notification.new(
+                    self.packagename + _(" installed"))
             self.command = ["/usr/bin/pkexec", os.path.dirname(os.path.abspath(__file__)) + "/Actions.py", "install",
                             self.debianpackage]
             self.pid = self.startProcess(self.command)
@@ -408,7 +429,8 @@ class MainWindow(object):
                 self.progstack.set_visible(True)
                 self.progstack.set_visible_child_name("doneinfo")
                 self.doneinfolabel.set_markup("<b><span color='red'>{}\n</span>{}:{}, {}:{}".format(
-                    _("Package Architecture Error"), _("System"), self.systemarchitecture, _("Package"),
+                    _("Package Architecture Error"), _(
+                        "System"), self.systemarchitecture, _("Package"),
                     self.packagearchitecture))
 
     def removePackage(self):
@@ -420,7 +442,8 @@ class MainWindow(object):
             self.button2.set_sensitive(False)
             self.openbutton.set_sensitive(False)
             self.closestatus = True
-            self.notification = Notify.Notification.new(self.packagename + _(" uninstalled"))
+            self.notification = Notify.Notification.new(
+                self.packagename + _(" uninstalled"))
             self.command = ["/usr/bin/pkexec", os.path.dirname(os.path.abspath(__file__)) + "/Actions.py", "remove",
                             self.packagename]
             self.pid = self.startProcess(self.command)
@@ -432,7 +455,8 @@ class MainWindow(object):
         self.button2.set_sensitive(False)
         self.openbutton.set_sensitive(False)
         self.closestatus = True
-        self.notification = Notify.Notification.new(self.packagename + _(" reinstalled"))
+        self.notification = Notify.Notification.new(
+            self.packagename + _(" reinstalled"))
         self.command = ["/usr/bin/pkexec", os.path.dirname(os.path.abspath(__file__)) + "/Actions.py", "reinstall",
                         self.debianpackage]
         self.pid = self.startProcess(self.command)
@@ -444,7 +468,8 @@ class MainWindow(object):
         self.button2.set_sensitive(False)
         self.openbutton.set_sensitive(False)
         self.closestatus = True
-        self.notification = Notify.Notification.new(self.packagename + _(" downgraded"))
+        self.notification = Notify.Notification.new(
+            self.packagename + _(" downgraded"))
         self.command = ["/usr/bin/pkexec", os.path.dirname(os.path.abspath(__file__)) + "/Actions.py", "downgrade",
                         self.debianpackage]
         self.pid = self.startProcess(self.command)
@@ -584,7 +609,8 @@ class MainWindow(object):
         if status != 0:
             pkg = self.cache[self.packagename]
             systemversion = str(pkg.installed).split("=")[1]
-            self.installed_version.set_markup("<small><span weight='light'>{}</span></small>".format(systemversion))
+            self.installed_version.set_markup(
+                "<small><span weight='light'>{}</span></small>".format(systemversion))
         else:
             self.installed_version.set_markup(
                 "<small><span weight='light'>{}</span></small>".format(_("Not installed")))
@@ -622,8 +648,10 @@ class MainWindow(object):
     def startProcess(self, params):
         pid, stdin, stdout, stderr = GLib.spawn_async(params, flags=GLib.SpawnFlags.DO_NOT_REAP_CHILD,
                                                       standard_output=True, standard_error=True)
-        GLib.io_add_watch(GLib.IOChannel(stdout), GLib.IO_IN | GLib.IO_HUP, self.onProcessStdout)
-        GLib.io_add_watch(GLib.IOChannel(stderr), GLib.IO_IN | GLib.IO_HUP, self.onProcessStderr)
+        GLib.io_add_watch(GLib.IOChannel(stdout), GLib.IO_IN |
+                          GLib.IO_HUP, self.onProcessStdout)
+        GLib.io_add_watch(GLib.IOChannel(stderr), GLib.IO_IN |
+                          GLib.IO_HUP, self.onProcessStderr)
         GLib.child_watch_add(GLib.PRIORITY_DEFAULT, pid, self.onProcessExit)
 
         return pid
@@ -632,8 +660,10 @@ class MainWindow(object):
         if condition == GLib.IO_HUP:
             return False
 
-        self.textview.get_buffer().insert(self.textview.get_buffer().get_end_iter(), source.readline())
-        self.textview.scroll_to_iter(self.textview.get_buffer().get_end_iter(), 0.0, False, 0.0, 0.0)
+        self.textview.get_buffer().insert(
+            self.textview.get_buffer().get_end_iter(), source.readline())
+        self.textview.scroll_to_iter(
+            self.textview.get_buffer().get_end_iter(), 0.0, False, 0.0, 0.0)
 
         return True
 
@@ -651,8 +681,10 @@ class MainWindow(object):
             elif "pmstatus" in line:
                 percent = line.split(":")[2].split(".")[0]
                 self.progressbar.set_show_text(True)
-                self.progressbar.set_text("{} {} %".format(self.packageaction, percent))
-                self.progressbar.set_text("{} {} %".format(self.packageaction, percent))
+                self.progressbar.set_text(
+                    "{} {} %".format(self.packageaction, percent))
+                self.progressbar.set_text(
+                    "{} {} %".format(self.packageaction, percent))
                 self.progressbar.set_fraction(int(percent) / 100)
             elif "E:" in line and ".deb" in line:
                 print("connection error")
@@ -667,7 +699,8 @@ class MainWindow(object):
                 self.dpkglockerror = True
 
             self.textview.get_buffer().insert(self.textview.get_buffer().get_end_iter(), (line))
-            self.textview.scroll_to_iter(self.textview.get_buffer().get_end_iter(), 0.0, False, 0.0, 0.0)
+            self.textview.scroll_to_iter(
+                self.textview.get_buffer().get_end_iter(), 0.0, False, 0.0, 0.0)
 
         return True
 
@@ -682,14 +715,18 @@ class MainWindow(object):
                 self.progstack.set_visible_child_name("done")
             else:
                 self.progstack.set_visible_child_name("doneinfo")
-                self.doneinfolabel.set_markup("<b>{}</b>".format(_("Not Completed !")))
+                self.doneinfolabel.set_markup(
+                    "<b>{}</b>".format(_("Not Completed !")))
                 self.notificationstate = False
         else:
-            errormessage = _("<b><span color='red'>Connection Error !</span></b>")
+            errormessage = _(
+                "<b><span color='red'>Connection Error !</span></b>")
             if self.dpkglockerror:
-                errormessage = _("<b><span color='red'>Dpkg Lock Error !</span></b>")
+                errormessage = _(
+                    "<b><span color='red'>Dpkg Lock Error !</span></b>")
             elif self.dpkgconferror:
-                errormessage = _("<b><span color='red'>Dpkg Interrupt Error !</span></b>")
+                errormessage = _(
+                    "<b><span color='red'>Dpkg Interrupt Error !</span></b>")
             self.doneinfolabel.set_markup(errormessage)
             self.notificationstate = False
             if self.progressbar.get_show_text():
@@ -705,11 +742,14 @@ class MainWindow(object):
         self.closestatus = False
         if self.isinstalling and self.status == 0 and retval == 0:
             print("connection lost")
-            errormessage = _("<b><span color='red'>Connection Error !</span></b>")
+            errormessage = _(
+                "<b><span color='red'>Connection Error !</span></b>")
             if self.dpkglockerror:
-                errormessage = _("<b><span color='red'>Dpkg Lock Error !</span></b>")
+                errormessage = _(
+                    "<b><span color='red'>Dpkg Lock Error !</span></b>")
             elif self.dpkgconferror:
-                errormessage = _("<b><span color='red'>Dpkg Interrupt Error !</span></b>")
+                errormessage = _(
+                    "<b><span color='red'>Dpkg Interrupt Error !</span></b>")
             self.doneinfolabel.set_markup(errormessage)
             if self.progressbar.get_show_text():
                 self.progressbar.set_show_text(False)
@@ -730,7 +770,8 @@ class MainWindow(object):
         self.dpkgconferror = False
         self.isinstalling = False
         self.notify()
-        self.textview.scroll_to_iter(self.textview.get_buffer().get_end_iter(), 0.0, False, 0.0, 0.0)
+        self.textview.scroll_to_iter(
+            self.textview.get_buffer().get_end_iter(), 0.0, False, 0.0, 0.0)
 
     def notify(self):
         if self.notificationstate:
@@ -739,19 +780,22 @@ class MainWindow(object):
 
             Notify.init(self.packagename)
             try:
-                pixbuf = Gtk.IconTheme.get_default().load_icon(self.packagename, 64, Gtk.IconLookupFlags(16))
+                pixbuf = Gtk.IconTheme.get_default().load_icon(
+                    self.packagename, 64, Gtk.IconLookupFlags(16))
             except:
                 try:
                     daftpixbuf = Gtk.IconTheme.new()
                     daftpixbuf.set_custom_theme("daft")
-                    pixbuf = daftpixbuf.load_icon(self.packagename, 64, Gtk.IconLookupFlags(16))
+                    pixbuf = daftpixbuf.load_icon(
+                        self.packagename, 64, Gtk.IconLookupFlags(16))
                 except:
                     try:
                         pixbuf = Gtk.IconTheme.get_default().load_icon("debpakir", 64,
                                                                        Gtk.IconLookupFlags(16))
                     except:
                         try:
-                            pixbuf = daftpixbuf.load_icon("debpakir", 64, Gtk.IconLookupFlags(16))
+                            pixbuf = daftpixbuf.load_icon(
+                                "debpakir", 64, Gtk.IconLookupFlags(16))
                         except:
                             pixbuf = Gtk.IconTheme.get_default().load_icon("gtk-dialog-info", 64,
                                                                            Gtk.IconLookupFlags(16))

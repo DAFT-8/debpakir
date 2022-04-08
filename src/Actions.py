@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import subprocess, sys, os, apt_pkg
+import subprocess
+import sys
+import os
+import apt_pkg
 
 
 def main():
@@ -20,7 +23,8 @@ def main():
 
     def reinstall(debianpackage):
         subprocess.call(
-            ["apt", "install", "--reinstall", "--allow-downgrades", debianpackage, "-yq", "-o", "APT::Status-Fd=2"],
+            ["apt", "install", "--reinstall", "--allow-downgrades",
+                debianpackage, "-yq", "-o", "APT::Status-Fd=2"],
             env={**os.environ, 'DEBIAN_FRONTEND': 'noninteractive'})
 
     def remove(packagename):

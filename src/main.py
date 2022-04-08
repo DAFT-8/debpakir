@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from gi.repository import GLib, Gio, Gtk
 import sys
 import gi
 import os.path
 from MainWindow import MainWindow
 
 gi.require_version('Gtk', '3.0')
-from gi.repository import GLib, Gio, Gtk
 
 
 class Application(Gtk.Application):

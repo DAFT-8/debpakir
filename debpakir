@@ -1,8 +1,8 @@
 #!/usr/bin/sh
-$(ps aux | egrep -i 'python3' | egrep debpakir) & >/dev/null 2>&1 && echo running
+$(ps aux | egrep -i 'python3' | egrep debpakir) && echo running
 
 if [ $? = 0 ]; then
-    $(pgrep -f debpakir && /usr/bin/xdotool windowactivate "$(/usr/bin/xdotool search --name 'debian package installer')" && exit 0) & >/dev/null 2>&1
+    $(pgrep -f debpakir && /usr/bin/xdotool windowactivate "$(/usr/bin/xdotool search --name 'debian package installer')" && exit 0)
 else
-    $(exec /usr/bin/python3 /usr/share/daft-8/debpakir/src/main.py "$@") & >/dev/null 2>&1
+    exec $(/usr/bin/python3 /usr/share/daft-8/debpakir/src/main.py "$@") & >/dev/null 2>&1
 fi

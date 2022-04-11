@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from gi.repository import GLib, Gio, Gtk
 import sys
 import gi
 import os.path
-from MainWindow import MainWindow
 
 gi.require_version('Gtk', '3.0')
-
+gi.require_version('Notify', '0.7')
+from gi.repository import GLib, Gio, Gtk
+from MainWindow import MainWindow
 
 class Application(Gtk.Application):
     def __init__(self, *args, **kwargs):

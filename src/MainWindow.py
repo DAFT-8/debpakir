@@ -1,26 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-from locale import gettext as _
-import locale
-import threading
-from subprocess import PIPE, Popen
-import apt.debfile as aptdeb
-from gi.repository import Notify
-from gi.repository import Gdk
-from gi.repository import GLib
-from gi.repository import GObject
-from gi.repository import Gtk
 import math
 import re
 import gi
 import apt
 import os
 import sys
+import locale
+import threading
+import apt.debfile as aptdeb
 
 gi.require_version('Gtk', '3.0')
+gi.require_version('Gdk', '3.0')
 gi.require_version("Notify", "0.7")
-
+from locale import gettext as _
+from subprocess import PIPE, Popen
+from gi.repository import Notify
+from gi.repository import Gdk
+from gi.repository import GLib
+from gi.repository import GObject
+from gi.repository import Gtk
 
 locale.bindtextdomain('debpakir', '/usr/share/locale')
 locale.textdomain('debpakir')

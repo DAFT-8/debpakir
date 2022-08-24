@@ -1,4 +1,4 @@
-# DEBian PacKage InstalleR
+# DEBian PAcKage InstalleR
 
 _debpakir_ is a application for install, uninstall or view deb packages.
 
